@@ -1,13 +1,14 @@
-var srcStr = document.getElementById("bgInput").value;
 
-function changeBG(){
-    document.getElementById("bgpic").scr = srcStr
-}
 
 document.getElementById("menu").addEventListener("click", function(){
     document.getElementById("controls").style.bottom = "0px";
 });
 
+var srcStr = document.getElementById("bgInput").value;
+
+function changeBG(){
+    document.getElementById("bgpic").scr = srcStr
+};
 
 function transferInput(){
     
@@ -18,8 +19,6 @@ function transferInput(){
         srcStr = "img/bg2.jpg";
     } else if(val == "mountain"){
         srcStr = "img/bg3.jpg";
-    #} else if(indexOf val == "epic"){
-        #srcStr = "img/bg4.jpg";
     } else {
         srcStr = val;
     }
@@ -90,5 +89,5 @@ document.getElementById("bgInput").addEventListener("keyup", function(ev){
     if(ev.keyCode == 13){
         transferInput();
         changeBG();
-    }
+    }});
 
